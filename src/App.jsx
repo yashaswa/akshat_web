@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Menu, X, Phone, Mail, MapPin, ShoppingBag, Users, Award, Truck } from 'lucide-react';
 import HomePage from './Home';
