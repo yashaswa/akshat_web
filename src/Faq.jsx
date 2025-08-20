@@ -8,11 +8,11 @@ const FAQPage = () => {
   const faqs = [
     {
       question: 'What is your minimum order quantity?',
-      answer: 'Our minimum order quantity is 500kg (20 bags of 25kg each). For smaller quantities, please contact us to discuss available options.'
+      answer: 'Our minimum order quantity is 50kg (2 bags of 25kg each). For smaller quantities, please contact us to discuss available options.'
     },
     {
       question: 'Do you offer delivery services?',
-      answer: 'Yes, we provide delivery services within a 200-mile radius. Delivery charges vary based on distance and order size. Free delivery is available for orders above $2,000.'
+      answer: 'Yes, we provide delivery services within a 100-km radius. Delivery charges vary based on distance and order size. Free delivery is available for orders above 4,000 in Indore.'
     },
     {
       question: 'What are your payment terms?',

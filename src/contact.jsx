@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react"; // ✅ lucide-react icons
-
+import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -10,10 +10,41 @@ const ContactPage = () => {
     message: ""
   });
 
-  const handleSubmit = (e) => {
+ const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you for your message! We will contact you soon.");
-    setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+
+const serviceId = import.meta.env.VITE_SERVICE_ID;
+const publicKey = import.meta.env.VITE_PUBLIC_KEY;
+const templateId = import.meta.env.VITE_TEMPLATE_ID;
+
+
+
+console.log(serviceId, publicKey, templateId); // for testing
+
+    emailjs
+      .send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company,
+          message: formData.message,
+          time: new Date().toLocaleString(), // optional
+        },
+        publicKey
+      )
+      .then(
+        () => {
+          alert("✅ Thank you! Your message has been sent.");
+          setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          alert("❌ Oops! Something went wrong. Please try again.");
+        }
+      );
   };
 
   const handleChange = (e) => {
@@ -48,11 +79,13 @@ const ContactPage = () => {
               <div>
                 <h3 className="font-semibold">Address</h3>
                 <p className="text-gray-600">
-                  123 Flour Street
+                  Udyog Nagar Suryey No 311/2
                   <br />
-                  Industrial District
+                  Devguradiya,Nemawar Road
                   <br />
-                  City, State 12345
+                   Khandelwal Compound ,Palda
+                  <br />
+                  Indore, M.P 452001
                 </p>
               </div>
             </div>
@@ -64,8 +97,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold">Phone</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
-                <p className="text-gray-600">Toll Free: 1-800-ABC-FLOUR</p>
+                <p className="text-gray-600">+91 9111194909</p>
+                <p className="text-gray-600"></p>
               </div>
             </div>
 
@@ -76,8 +109,8 @@ const ContactPage = () => {
               </div>
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-gray-600">info@abcflour.com</p>
-                <p className="text-gray-600">sales@abcflour.com</p>
+                <p className="text-gray-600">Vijayrathfoodpvtltd@gmail.com</p>
+                <p className="text-gray-600"></p>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const Header = () => {
             <ShoppingBag size={24} />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-gray-800">ABC Flour</h1>
+            <h1 className="text-xl font-bold text-gray-800">VijayRath Foods</h1>
             <p className="text-sm text-gray-600">Wholesale Excellence</p>
           </div>
         </Link>

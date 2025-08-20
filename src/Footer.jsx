@@ -21,7 +21,7 @@ const navigation = [
             <div className="bg-amber-600 text-white p-2 rounded-full">
               <ShoppingBag size={20} />
             </div>
-            <h3 className="text-xl font-bold">ABC Flour</h3>
+            <h3 className="text-xl font-bold">VijayRath Foods</h3>
           </div>
           <p className="text-gray-300">
             Your trusted partner for premium flour wholesale solutions across the region.
@@ -51,15 +51,15 @@ const navigation = [
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
               <Phone size={16} />
-              <span className="text-gray-300">+1 (555) 123-4567</span>
+              <span className="text-gray-300">+91 9111194909</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail size={16} />
-              <span className="text-gray-300">info@abcflour.com</span>
+              <span className="text-gray-300">Vijayrathfoodpvtltd@gmail.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin size={16} />
-              <span className="text-gray-300">123 Flour Street, City, State</span>
+              <span className="text-gray-300">311/2 Khandelwal Compound Palda, Indore, M.P</span>
             </div>
           </div>
         </div>
@@ -78,7 +78,7 @@ const navigation = [
       {/* Bottom Text */}
       <div className="border-t border-gray-700 mt-8 pt-8 text-center">
         <p className="text-gray-300">
-          © 2025 ABC Flour Wholesale. All rights reserved.
+          © 2025 VIjayRath Foods Wholesale. All rights reserved.
         </p>
       </div>
     </div>

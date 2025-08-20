@@ -8,6 +8,11 @@ import {
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
+import wheat1 from "./assets/images/wheat1.jpg";
+import wheat2 from "./assets/images/wheat2.jpg";
+import wheat3 from "./assets/images/wheat3.jpg";
+import wheat4 from "./assets/images/wheat4.jpg";
+import wheat5 from "./assets/images/wheat5.jpg";
 
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -46,11 +51,7 @@ const HomePage = () => {
   // ];
 
   const wheatTypes = [
-    "images/wheat1.jpg",
-    "images/wheat2.jpg",
-    "images/wheat3.jpg",
-    "images/wheat4.jpg",
-    "images/wheat5.jpg",
+   wheat1,wheat2,wheat3,wheat4,wheat5,
   ];
 
   useEffect(() => {
