@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const FAQPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
-  const navigate = useNavigate(); // ✅ for navigation
+  const navigate = useNavigate(); 
 
   const faqs = [
     {
@@ -78,7 +78,7 @@ const FAQPage = () => {
           Our experienced team is here to help with any additional questions about our products or services.
         </p>
         <button
-          onClick={() => navigate("/contact")} // ✅ React Router navigation
+          onClick={() => navigate("/contact")} 
           className="bg-amber-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-amber-700 transition-colors"
         >
           Contact Us

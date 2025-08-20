@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Phone, Mail } from "lucide-react"; // ✅ lucide-react icons
+import { MapPin, Phone, Mail } from "lucide-react"; 
 import emailjs from "@emailjs/browser";
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -19,7 +19,7 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
 
 
 
-console.log(serviceId, publicKey, templateId); // for testing
+
 
     emailjs
       .send(
@@ -31,7 +31,7 @@ console.log(serviceId, publicKey, templateId); // for testing
           phone: formData.phone,
           company: formData.company,
           message: formData.message,
-          time: new Date().toLocaleString(), // optional
+          time: new Date().toLocaleString(), 
         },
         publicKey
       )

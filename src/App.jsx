@@ -14,10 +14,10 @@ const App = () => {
 return (
     <Router>
       <div className="min-h-screen bg-gray-50 flex flex-col">
-        {/* ✅ Header always visible */}
+        
         <Header />
 
-        {/* ✅ Main content */}
+        
         <main className="flex-grow">
           <Routes>
             <Route path="/" element={<HomePage />} />
@@ -25,12 +25,12 @@ return (
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/contact" element={<ContactPage />} /> 
-            {/* fallback route */}
+        
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
 
-        {/* ✅ Footer always visible */}
+
         <Footer />
       </div>
     </Router>
