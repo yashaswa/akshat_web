@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { useState } from "react";
+import Logo from "./assets/images/Logo.png";
 
 const navigation = [
   { id: "home", name: "Home", path: "/" },
@@ -8,6 +9,7 @@ const navigation = [
   { id: "about", name: "About", path: "/about" },
   { id: "faq", name: "FAQ", path: "/faq" },
   { id: "contact", name: "Contact", path: "/contact" },
+  { id: "nutrition", name: "Nutrition", path: "/nutrition" },
 ];
 
 const Header = () => {
@@ -18,12 +20,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
-          <div className="bg-amber-600 text-white p-3 rounded-full">
-            <ShoppingBag size={24} />
-          </div>
+          
+           <img src={Logo} alt="Logo" className="w-20 h-20" />
+         
           <div>
-            <h1 className="text-xl font-bold text-gray-800">VijayRath Foods</h1>
-            <p className="text-sm text-gray-600">Wholesale Excellence</p>
+            <h1 className="text-xl font-bold mb-3 text-gray-800">VijayRath Foods</h1>
+            <p className="text-sm text-gray-600"></p>
           </div>
         </Link>
 

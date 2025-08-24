@@ -119,8 +119,7 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
           <div className="mt-8 bg-gray-100 p-6 rounded-lg">
             <h3 className="font-semibold mb-3">Business Hours</h3>
             <div className="space-y-1 text-gray-700">
-              <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-              <p>Saturday: 9:00 AM - 4:00 PM</p>
+              <p>Monday - Saturday: 10:00 AM - 7:00 PM</p>
               <p>Sunday: Closed</p>
             </div>
           </div>
@@ -181,18 +180,7 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
               </div>
 
               {/* Company */}
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Company Name
-                </label>
-                <input
-                  type="text"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                />
-              </div>
+              
             </div>
 
             {/* Message */}

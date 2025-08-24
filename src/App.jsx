@@ -8,6 +8,7 @@ import Header from './Header';
 import ContactPage from './contact';
 import ProductsPage from './Product';
 import AboutPage from './About';
+import NutritionComponent from "./nutrition";
 
 const App = () => {
 
@@ -24,6 +25,7 @@ return (
              <Route path="/products" element={<ProductsPage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/nutrition" element={<NutritionComponent />} /> 
             <Route path="/contact" element={<ContactPage />} /> 
         
             <Route path="*" element={<HomePage />} />

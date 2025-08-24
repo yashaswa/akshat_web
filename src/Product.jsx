@@ -9,7 +9,7 @@
             {[
               {
                 name: 'All-Purpose Flour',
-                description: 'Versatile flour perfect for baking, cooking, and general use. Available in 25kg, 50kg bags.',
+                description: 'Versatile flour perfect for baking, cooking, and general use. Available in 5kg, 10kg, 30kg, 50kg bags.',
                 protein: '10-12%'
               },
               {
@@ -69,8 +69,8 @@
 
       <div className="bg-gray-100 p-8 rounded-lg">
         <h2 className="text-2xl font-bold mb-4">Package Sizes Available</h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          {['25kg Bags', '50kg Bags', 'Bulk Orders (1000kg+)'].map((size, index) => (
+        <div className="grid md:grid-cols-4 gap-4">
+          {['5Kg Bags', '10Kg Bags', '30Kg Bags', '50Kg bags'].map((size, index) => (
             <div key={index} className="bg-white p-4 rounded text-center">
               <h3 className="font-semibold">{size}</h3>
             </div>

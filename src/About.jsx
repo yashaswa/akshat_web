@@ -59,7 +59,7 @@ const AboutPage = () => (
         <h3 className="text-2xl font-semibold mb-6 text-center text-amber-600">Our Team</h3>
         <div className="grid md:grid-cols-2 gap-6">
           {[
-            { name: "Tejas Yadav", role: "Founder & CEO", experience: "Experience in flour industry" },
+            { name: "Tejesh Yadav", role: "Founder & CEO", experience: "Experience in flour industry" },
             { name: "Akshat Agrawal", role: "Founder & COO", experience: "Food science expert" },
             
           ].map((member, index) => (
