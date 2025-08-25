@@ -1,7 +1,6 @@
 import React from 'react';
 import wheat1 from "./assets/images/wheat1.jpg"
 import logo from "./assets/images/Logo.png"
-import product from "./assets/images/product.jpg"
 const NutritionComponent = () => {
   const nutritionData = [
     { label: 'Energy', value: '364 Kcal', icon: '⚡' },

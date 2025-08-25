@@ -9,10 +9,10 @@
 //   ChevronRight,
 // } from "lucide-react";
 import wheat1 from "./assets/images/win1.jpg";
-import wheat2 from "./assets/images/win2.png";
+import wheat2 from "./assets/images/win2.PNG";
 import wheat3 from "./assets/images/wheat13.jpg";
 import wheat4 from "./assets/images/win4.jpg";
-import wheat5 from "./assets/images/win5.png";
+import wheat5 from "./assets/images/win5.PNG";
 import bagi from "./assets/images/bagi.webp";
 import mill from "./assets/images/mill2.png"
 import roti from "./assets/images/roti.png"
