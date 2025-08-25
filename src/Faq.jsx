@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import logo from "./assets/images/Logo.png";
 const FAQPage = () => {
   const [openFaq, setOpenFaq] = useState(null);
   const navigate = useNavigate(); 
@@ -8,11 +8,11 @@ const FAQPage = () => {
   const faqs = [
     {
       question: 'What is your minimum order quantity?',
-      answer: 'Our minimum order quantity is 50kg (2 bags of 25kg each). For smaller quantities, please contact us to discuss available options.'
+      answer: 'Our minimum order quantity is 100kg (2 bags of 50kg each). For smaller quantities, please contact us to discuss available options.'
     },
     {
       question: 'Do you offer delivery services?',
-      answer: 'Yes, we provide delivery services within a 100-km radius. Delivery charges vary based on distance and order size. Free delivery is available for orders above 4,000 in Indore.'
+      answer: 'Yes, we provide delivery services within a 100-km radius. Delivery charges vary based on distance and order size.'
     },
     {
       question: 'What are your payment terms?',
@@ -35,13 +35,26 @@ const FAQPage = () => {
       answer: 'Yes, we can arrange bulk storage and scheduled deliveries for large-volume customers. This helps optimize your inventory management and costs.'
     },
     {
-      question: 'Are your products organic certified?',
-      answer: 'We offer both conventional and organic certified flour products. Our organic flours are USDA certified and come with proper documentation.'
+      question: 'Are your products organic certified ?',
+      answer: 'We offer both conventional and organic certified flour products.'
     }
   ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="relative min-h-screen">
+       
+       {/* Watermark background logo */}
+       <div 
+         className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
+       >
+         <img 
+           src={logo} 
+           alt="Watermark Logo" 
+           className="w-[600px] opacity-10 select-none"
+         />
+       </div>
+     
+     <div className="relative z-10 container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-center mb-4">Frequently Asked Questions</h1>
       <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
         Find answers to common questions about our flour products and services. 
@@ -84,6 +97,7 @@ const FAQPage = () => {
           Contact Us
         </button>
       </div>
+    </div>
     </div>
   );
 };

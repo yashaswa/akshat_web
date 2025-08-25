@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logo from "./assets/images/Logo.png"
 import { MapPin, Phone, Mail } from "lucide-react"; 
 import emailjs from "@emailjs/browser";
 const ContactPage = () => {
@@ -55,7 +56,20 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
   };
 
   return (
-    <div className="container mx-auto px-4 py-12">
+     <div className="relative min-h-screen">
+        
+        {/* Watermark background logo */}
+        <div 
+          className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
+        >
+          <img 
+            src={logo} 
+            alt="Watermark Logo" 
+            className="w-[600px] opacity-10 select-none"
+          />
+        </div>
+      
+      <div className="relative z-10 container mx-auto px-4 py-12">
       <h1 className="text-4xl font-bold text-center mb-12">Contact Us</h1>
 
       <div className="grid lg:grid-cols-2 gap-12">
@@ -208,6 +222,7 @@ const templateId = import.meta.env.VITE_TEMPLATE_ID;
           </form>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -1,8 +1,7 @@
 // generate-sitemap.js
-import { SitemapStream, streamToPromise } from 'sitemap';
+import { SitemapStream } from 'sitemap';
 import { createWriteStream } from 'fs';
 
-// All your site routes
 const links = [
   { url: '/', changefreq: 'daily', priority: 1.0 },
   { url: '/about', changefreq: 'weekly', priority: 0.8 },
@@ -12,19 +11,18 @@ const links = [
   { url: '/nutrition', changefreq: 'weekly', priority: 0.7 },
 ];
 
-// Create sitemap stream
 const stream = new SitemapStream({ hostname: 'https://vijayrathfoods.com' });
-
-// Write sitemap to /public/sitemap.xml
 const writeStream = createWriteStream('./public/sitemap.xml');
 
-streamToPromise(stream).then(() => {
-  console.log('✅ sitemap.xml generated successfully!');
-});
+// Pipe the stream to write file
+stream.pipe(writeStream);
 
-// Add links to sitemap
+// Write all links
 links.forEach(link => stream.write(link));
 
 // End stream
 stream.end();
-stream.pipe(writeStream);
+
+writeStream.on('finish', () => {
+  console.log('✅ sitemap.xml generated successfully!');
+});

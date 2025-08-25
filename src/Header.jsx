@@ -6,10 +6,11 @@ import Logo from "./assets/images/Logo.png";
 const navigation = [
   { id: "home", name: "Home", path: "/" },
   { id: "products", name: "Products", path: "/products" },
-  { id: "about", name: "About", path: "/about" },
-  { id: "faq", name: "FAQ", path: "/faq" },
-  { id: "contact", name: "Contact", path: "/contact" },
   { id: "nutrition", name: "Nutrition", path: "/nutrition" },
+  { id: "about", name: "About", path: "/about" },
+  { id: "faq", name: "Faq", path: "/faq" },
+  { id: "contact", name: "Contact", path: "/contact" },
+  
 ];
 
 const Header = () => {

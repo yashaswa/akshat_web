@@ -1,7 +1,20 @@
 import { Users } from "lucide-react";
-
+import logo from "./assets/images/Logo.png"
 const AboutPage = () => (
-  <div className="container mx-auto px-4 py-12">
+   <div className="relative min-h-screen">
+      
+      {/* Watermark background logo */}
+      <div 
+        className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
+      >
+        <img 
+          src={logo} 
+          alt="Watermark Logo" 
+          className="w-[600px] opacity-10 select-none"
+        />
+      </div>
+    
+    <div className="relative z-10 container mx-auto px-4 py-12">
     <h1 className="text-4xl font-bold text-center mb-12">VijayRath Foods</h1>
 
     <div className="max-w-4xl mx-auto space-y-12">
@@ -76,6 +89,7 @@ const AboutPage = () => (
       </section>
     </div>
   </div>
+   </div>
 );
 
 export default AboutPage;

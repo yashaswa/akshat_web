@@ -1,5 +1,6 @@
 import React from 'react';
 import wheat1 from "./assets/images/wheat1.jpg"
+import logo from "./assets/images/Logo.png"
 import product from "./assets/images/product.jpg"
 const NutritionComponent = () => {
   const nutritionData = [
@@ -10,22 +11,23 @@ const NutritionComponent = () => {
     { label: 'Iron & Vitamins', value: 'Naturally present', icon: '✨' }
   ];
 
-  const products = [
-    {
-      name: 'Whole Wheat Atta',
-      description: 'Rich in fiber & nutrition for soft, fluffy rotis.',
-      image: product,
-      bgColor: 'bg-amber-100'
-    },
-    {
-      name: 'Multigrain Atta',
-      description: 'A blend of grains for health, taste, and strength.',
-      image: product,
-      bgColor: 'bg-green-100'
-    }
-  ];
+  
 
   return (
+     <div className="relative min-h-screen">
+        
+        {/* Watermark background logo */}
+        <div 
+          className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
+        >
+          <img 
+            src={logo} 
+            alt="Watermark Logo" 
+            className="w-[600px] opacity-[.03] select-none"
+          />
+        </div>
+      
+      <div className="relative z-10 container mx-auto "></div>
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50">
      
 
@@ -91,7 +93,7 @@ const NutritionComponent = () => {
           <div className="flex justify-center">
             <div className="bg-gradient-to-br from-amber-200 to-orange-300 p-8 rounded-lg shadow-lg transform rotate-3 hover:rotate-0 transition-transform duration-300">
               <div className="bg-white p-6 rounded-lg shadow-inner">
-                <div className="text-4xl mb-2 text-center">🏺</div>
+                <div className=" flex justify-center"><img src={logo} className='items-center w-24 h-24'  /></div>
                 <div className="text-lg font-bold text-amber-800 text-center mb-2">Vijayrath</div>
                 <div className="text-sm text-gray-600 text-center bg-amber-100 px-3 py-1 rounded">
                   WHOLE WHEAT ATTA
@@ -101,33 +103,7 @@ const NutritionComponent = () => {
           </div>
         </div>
 
-        {/* Products Section */}
-        <div className="mt-20">
-          <h2 className="text-3xl font-bold text-amber-800 mb-12">Our Products</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className={`${product.bgColor} p-4 text-center`}>
-                   <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-60 h-60 mx-auto object-contain"
-                  />
-                  <div className="bg-white p-4 rounded-lg shadow-inner mx-4">
-                    <div className="text-lg font-bold text-amber-800 mb-1">Vijayrath</div>
-                    <div className="text-sm text-gray-600 bg-amber-100 px-2 py-1 rounded">
-                      {product.name.toUpperCase()}
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
-                  <p className="text-gray-600">{product.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        
 
         {/* Nutrition Section */}
         <div className="mt-20">
@@ -162,6 +138,7 @@ const NutritionComponent = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
