@@ -118,29 +118,41 @@ const ProductsPage = () => (
 
      <div className="my-10">
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {products.map((product, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className={`${product.bgColor} p-4 text-center`}>
-                   <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-60 h-60 mx-auto object-contain"
-                  />
-                  <div className="bg-white p-4 rounded-lg shadow-inner mx-4">
-                    <div className="text-lg font-bold text-amber-800 mb-1">Vijayrath</div>
-                    <div className="text-sm text-gray-600 bg-amber-100 px-2 py-1 rounded">
-                      {product.name.toUpperCase()}
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
-                  <p className="text-gray-600">{product.description}</p>
-                </div>
-              </div>
-            ))}
+         <div className="grid md:grid-cols-2 gap-8">
+  {products.map((product, index) => (
+    <div
+      key={index}
+      className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+    >
+      <div className={`${product.bgColor} p-4 text-center`}>
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-60 h-60 mx-auto object-contain"
+        />
+        <div className="bg-white p-4 rounded-lg shadow-inner mx-4">
+         <button
+         
+          className="bg-amber-600 text-white px-6 py-2 mb-4 rounded-lg shadow hover:bg-amber-700 transition-colors" >
+            <a href="/contact">
+          Buy Now
+          </a>
+        </button>
+          <div className="text-sm text-gray-600 bg-amber-100 px-2 py-1 rounded">
+            {product.name.toUpperCase()}
           </div>
+        </div>
+      </div>
+
+      <div className="p-6 flex flex-col ">
+        <h3 className="text-xl font-bold text-gray-800 mb-2">{product.name}</h3>
+        <p className="text-gray-600 mb-4">{product.description}</p>
+        
+      </div>
+    </div>
+  ))}
+</div>
+
         </div>
 
     {/* Package Sizes */}
