@@ -6,7 +6,7 @@ const QRRedirect = () => {
 
 
   // Change this target anytime
-  const target = "https://www.vijayrathfoods.com/contact"; 
+  const target = "https://www.vijayrathfoods.com/#process"; 
 
 
   useEffect(() => {

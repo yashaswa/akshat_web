@@ -23,12 +23,22 @@ import logo from "./assets/images/Logo.png"
 
 import { useState, useEffect } from "react";
 import { Link } from "lucide-react";
-
+import { useLocation } from "react-router-dom";
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const location = useLocation();
 
   // Sample wheat/flour images - you can replace with your actual images
   const wheatTypes = [wheat1, wheat2, wheat3, wheat4, wheat5];
+
+   useEffect(() => {
+    if (location.hash) {
+      const el = document.getElementById(location.hash.replace("#", ""));
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+      }
+    }
+  }, [location]);
 
   useEffect(() => {
     const timer = setInterval(() => {
