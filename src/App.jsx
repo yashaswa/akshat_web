@@ -9,6 +9,7 @@ import ContactPage from './contact';
 import ProductsPage from './Product';
 import AboutPage from './About';
 import NutritionComponent from "./nutrition";
+import QRRedirect from "./QRRedirect";
 
 const App = () => {
 
@@ -27,7 +28,7 @@ return (
             <Route path="/faq" element={<FAQPage />} />
             <Route path="/nutrition" element={<NutritionComponent />} /> 
             <Route path="/contact" element={<ContactPage />} /> 
-        
+            <Route path="/qr" element={<QRRedirect />} />
             <Route path="*" element={<HomePage />} />
           </Routes>
         </main>
